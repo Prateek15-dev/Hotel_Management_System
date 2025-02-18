@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beach Resort Login</title>
+    <style>
+        .login{
+            font-family: Arial, sans-serif;
+            background-image: url('./images/defaultBcg2.jpg');
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: brown;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="login">
+    <div class="header">Welcome to Beach Resort</div>
+
+    <div class="login-container" id="login-container">
+        <h2>Admin and User Login</h2>
+        <input type="text" id="username" placeholder="Enter your username" required>
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <button onclick="login()">Sign In</button>
+        <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+    </div>
+
+    <div class="login-container" id="signup-container" style="display:none;">
+        <h2>Sign Up</h2>
+        <input type="text" id="new-username" placeholder="Choose a username" required>
+        <input type="password" id="new-password" placeholder="Choose a password" required>
+        <button onclick="signUp()">Sign Up</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Sign In</a></p>
+    </div>
+
+    <div class="footer">&copy; 2025 Beach Resort. All Rights Reserved.</div>
+
+    <script src="index.js" charset="UTF-8"></script>
+</body>
+</html>
+
